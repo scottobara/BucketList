@@ -12,6 +12,10 @@
 		365BADF525E1D19600C646B4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365BADF425E1D19600C646B4 /* ContentView.swift */; };
 		365BADF725E1D19700C646B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 365BADF625E1D19700C646B4 /* Assets.xcassets */; };
 		365BADFA25E1D19700C646B4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 365BADF925E1D19700C646B4 /* Preview Assets.xcassets */; };
+		366908CA25E64B6D002822BE /* MKPointAnnotation-ObservableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366908C925E64B6D002822BE /* MKPointAnnotation-ObservableObject.swift */; };
+		366908CD25E64C10002822BE /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366908CC25E64C10002822BE /* EditView.swift */; };
+		366908D425E6588B002822BE /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366908D325E6588B002822BE /* Result.swift */; };
+		366A2D3725E8D8F600042E39 /* MKPointAnnotation-Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366A2D3625E8D8F600042E39 /* MKPointAnnotation-Codable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		365BADF625E1D19700C646B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		365BADF925E1D19700C646B4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		365BADFB25E1D19700C646B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		366908C925E64B6D002822BE /* MKPointAnnotation-ObservableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKPointAnnotation-ObservableObject.swift"; sourceTree = "<group>"; };
+		366908CC25E64C10002822BE /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
+		366908D325E6588B002822BE /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		366A2D3625E8D8F600042E39 /* MKPointAnnotation-Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKPointAnnotation-Codable.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +64,10 @@
 			children = (
 				365BADF225E1D19600C646B4 /* BucketListApp.swift */,
 				365BADF425E1D19600C646B4 /* ContentView.swift */,
+				366908D325E6588B002822BE /* Result.swift */,
+				366908C925E64B6D002822BE /* MKPointAnnotation-ObservableObject.swift */,
+				366908CC25E64C10002822BE /* EditView.swift */,
+				366A2D3625E8D8F600042E39 /* MKPointAnnotation-Codable.swift */,
 				36546B8625E3A73600DB70BA /* MapView.swift */,
 				365BADF625E1D19700C646B4 /* Assets.xcassets */,
 				365BADFB25E1D19700C646B4 /* Info.plist */,
@@ -141,7 +153,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				366A2D3725E8D8F600042E39 /* MKPointAnnotation-Codable.swift in Sources */,
+				366908D425E6588B002822BE /* Result.swift in Sources */,
 				365BADF525E1D19600C646B4 /* ContentView.swift in Sources */,
+				366908CD25E64C10002822BE /* EditView.swift in Sources */,
+				366908CA25E64B6D002822BE /* MKPointAnnotation-ObservableObject.swift in Sources */,
 				36546B8725E3A73600DB70BA /* MapView.swift in Sources */,
 				365BADF325E1D19600C646B4 /* BucketListApp.swift in Sources */,
 			);
