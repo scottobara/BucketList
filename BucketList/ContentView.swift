@@ -17,16 +17,25 @@ struct ContentView: View {
     @State private var showingEditScreen = false
     @State private var isUnlocked = false
     
+    @State private var alertTitle: Text?
+    @State private var alertMessage: Text?
+    @State private var alertPrimaryButton: Alert.Button?
+    @State private var alertSecondaryButton: Alert.Button?
+    
+    
     var body: some View {
         ZStack {
-            if isUnlocked {
+            if isUnlocked { //|| !isUnlocked
+                
+//                HomeView(centerCoordinate: $centerCoordinate, locations: $locations, selectedPlace: $selectedPlace, showingPlaceDetails: $showingPlaceDetails, showingEditScreen: $showingEditScreen)
+                
                 MapView(centerCoordinate: $centerCoordinate, selectedPlace: $selectedPlace, showingPlaceDetails: $showingPlaceDetails, annotations: locations)
                     .edgesIgnoringSafeArea(.all)
                 Circle()
                     .fill(Color.blue)
                     .opacity(0.3)
                     .frame(width: 32, height: 32)
-                
+
                 VStack {
                     Spacer()
                     HStack {
@@ -40,13 +49,14 @@ struct ContentView: View {
                             self.showingEditScreen = true
                         }) {
                             Image(systemName: "plus")
+                                .padding()
+                                .background(Color.black.opacity(0.75))
+                                .foregroundColor(.white)
+                                .font(.title)
+                                .clipShape(Circle())
+                                .padding(.trailing)
                         }
-                        .padding()
-                        .background(Color.black.opacity(0.75))
-                        .foregroundColor(.white)
-                        .font(.title)
-                        .clipShape(Circle())
-                        .padding(.trailing)
+
                     }
                 }
             } else {
@@ -60,7 +70,7 @@ struct ContentView: View {
             }
         }
         .alert(isPresented: $showingPlaceDetails) {
-            Alert(title: Text(selectedPlace?.title ?? "Unknown"), message: Text(selectedPlace?.subtitle ?? "Missing place information."), primaryButton: .default(Text("OK")), secondaryButton: .default(Text("Edit")) {
+            Alert(title: alertTitle ?? Text(selectedPlace?.title ?? "Unknown"), message: alertMessage ?? Text(selectedPlace?.subtitle ?? "Missing place information."), primaryButton: alertPrimaryButton ?? .default(Text("OK")), secondaryButton: alertSecondaryButton ?? .default(Text("Edit")) {
                     self.showingEditScreen = true
             })
         }
@@ -110,8 +120,29 @@ struct ContentView: View {
                 DispatchQueue.main.async {
                     if success {
                         self.isUnlocked = true
+                        
                     } else {
-                        // error
+                        self.alertTitle = Text("Error unlocking device")
+                        self.alertMessage = Text(error?.localizedDescription ?? "Unknown error")
+                        self.alertPrimaryButton = .default(Text("OK")) {
+                            self.alertTitle = nil
+                            self.alertMessage = nil
+                            self.alertPrimaryButton = nil
+                            self.alertSecondaryButton = nil
+                            
+                            self.showingPlaceDetails = false
+                        }
+                        self.alertSecondaryButton = .default(Text("Also OK")) {
+                            self.alertTitle = nil
+                            self.alertMessage = nil
+                            self.alertPrimaryButton = nil
+                            self.alertSecondaryButton = nil
+                            
+                            self.showingPlaceDetails = false
+                        }
+                        self.showingPlaceDetails = true
+                        
+                        
                     }
                 }
             }

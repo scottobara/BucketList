@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		36529FC225E9CBDA00956100 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36529FC125E9CBDA00956100 /* HomeView.swift */; };
 		36546B8725E3A73600DB70BA /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36546B8625E3A73600DB70BA /* MapView.swift */; };
 		365BADF325E1D19600C646B4 /* BucketListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365BADF225E1D19600C646B4 /* BucketListApp.swift */; };
 		365BADF525E1D19600C646B4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365BADF425E1D19600C646B4 /* ContentView.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		36529FC125E9CBDA00956100 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		36546B8625E3A73600DB70BA /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		365BADEF25E1D19600C646B4 /* BucketList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BucketList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		365BADF225E1D19600C646B4 /* BucketListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketListApp.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 			children = (
 				365BADF225E1D19600C646B4 /* BucketListApp.swift */,
 				365BADF425E1D19600C646B4 /* ContentView.swift */,
+				36529FC125E9CBDA00956100 /* HomeView.swift */,
 				366908D325E6588B002822BE /* Result.swift */,
 				366908C925E64B6D002822BE /* MKPointAnnotation-ObservableObject.swift */,
 				366908CC25E64C10002822BE /* EditView.swift */,
@@ -158,6 +161,7 @@
 				365BADF525E1D19600C646B4 /* ContentView.swift in Sources */,
 				366908CD25E64C10002822BE /* EditView.swift in Sources */,
 				366908CA25E64B6D002822BE /* MKPointAnnotation-ObservableObject.swift in Sources */,
+				36529FC225E9CBDA00956100 /* HomeView.swift in Sources */,
 				36546B8725E3A73600DB70BA /* MapView.swift in Sources */,
 				365BADF325E1D19600C646B4 /* BucketListApp.swift in Sources */,
 			);
